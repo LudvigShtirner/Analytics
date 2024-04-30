@@ -124,7 +124,7 @@ extension Analytics: AnalyticsUserDataInput {
         let encoder = DictionaryEncoder()
         do {
             let properties: [String: Any] =  try encoder.encode(model)
-            userDataDirectors.forEach { $0.setUserProperties(properties) }
+            setUserPropertiesWithDictionary(properties)
         } catch {
             fatalError("Error! Encoding for model of user propery. \(model)")
         }

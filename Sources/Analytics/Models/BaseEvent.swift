@@ -11,8 +11,4 @@ import Foundation
 /// Базовая модель для обертки примитивов, таких как:  String, Int, Bool, и т.д.
 public struct BaseEvent<T: Encodable>: Encodable {
     var value: T
-    
-    enum CodingKeys: String, CodingKey {
-        case value
-    }
 }

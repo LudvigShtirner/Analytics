@@ -2,27 +2,8 @@ import Foundation
 
 /// Протокол, который нужно реализовывать каждой системе аналитики, участвующей в работе со свойствами пользователя
 public protocol AnalyticsUserDataDirector {
-    
-    /// Use configure for systems witch don't have implementatin for AnalyticsEventHandler
     func configure()
-    
-    /**
-     Adds properties that are tracked on the user level.
-     
-     ## Note ##
-     Use only flat dictionary for parametres where values are convertable to String
-     
-     - Parameters:
-        - properties: An Dictionary containing any additional data to be tracked.
-    */
     func setUserProperties(_ properties: [String: Any])
-    
-    /**
-     Clears all properties that are tracked on the user level.
-     
-     ## Note ##
-     For 12.06.2019 work only in Amplitude and the result is irreversible!
-    */
     func clearUserProperties()
     
     /**

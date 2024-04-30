@@ -8,7 +8,7 @@ private let analyticsTests = "AnalyticsTests"
 
 let package = Package(
     name: analytics,
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v15)],
     products: [
         .library(name: analytics, targets: [analytics]),
     ],
